@@ -25,9 +25,7 @@ const App = () => {
             color: "white",
             height: 50,
           }}
-        >
-          Footer
-        </Footer>
+        ></Footer>
       </Layout>
     </div>
   );

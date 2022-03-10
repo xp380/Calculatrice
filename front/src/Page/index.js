@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Card, Row, Col } from "antd";
 import "./Page.css";
 
-const Page = (props) => {
-  const [count, setCount] = useState(0);
+const Page = () => {
+  const [count, setCount] = useState([0]);
+  const [count2, setCount2] = useState([0]);
+  const [totalCount, setTotalCount] = useState(count + count2);
 
   const IncrementByOne = () => {
     setCount((count) => count + 1);
@@ -45,7 +47,7 @@ const Page = (props) => {
     setCount((count) => count + 0);
   };
 
-  const testButton = <button onClick={() => setCount(0)}>Reset</button>;
+  const testButton = <button onClick={() => setCount([0])}>Reset</button>;
   return (
     <div>
       <Card
